@@ -13,7 +13,7 @@
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://raw.githubusercontent.com/sanegaming/AMPTemplates/main/primal-earthgame.ini",
         "UpdateSourceArgs":"Game.ini",
-        "UpdateSourceTarget":"{{$FullBaseDir}}WindowsServer/PrimalEarth/Saved/Config/WindowsServer",
+        "UpdateSourceTarget":"{{$FullBaseDir}}WindowsServer/PrimalEarth/Saved/Config",
         "OverwriteExistingFiles":false
     },
     {
