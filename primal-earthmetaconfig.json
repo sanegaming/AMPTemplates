@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile":"WindowsServer/PrimalEarth/Saved/Config/WindowsServer/Game.ini",
+        "ConfigFile":"PrimalEarth/Saved/Config/Game.ini",
         "ConfigType":"ini",
         "AutoMap":true,
         "ConfigFormat":"{0}=\"{1}\"",
