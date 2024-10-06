@@ -1,0 +1,137 @@
+[
+    {
+        "DisplayName":"Session Name",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the server name displayed in the server browser. Use underscores (_) instead of spaces!",
+        "Keywords":"session,name,sessionname",
+        "FieldName":"SessionName",
+        "InputType":"text",
+        "ParamFieldName":"SessionName",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"Attoric_Powered_Primal_Earth_Server",
+        "Placeholder":"Attoric_Powered_Primal_Earth_Server",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Map Name",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the initial map to load on the server",
+        "Keywords":"map,name,mapname",
+        "FieldName":"MapName",
+        "InputType":"enum",
+        "ParamFieldName":"MapName",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"Majal_Island",
+        "EnumValues":{
+            "Majal_Island":"Majal Island"
+        }
+    },
+    {
+        "DisplayName":"Map Name",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"MapName",
+        "InputType":"text",
+        "Hidden":true,
+        "ParamFieldName":"/Script/PrimalEarth.ServerGameInstance.MapNameOverride",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Game Mode",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the game mode for the server",
+        "Keywords":"game,mode,gamemode",
+        "FieldName":"GameMode",
+        "InputType":"enum",
+        "ParamFieldName":"GameMode",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"Survival",
+        "EnumValues":{
+            "Survival":"Survival"
+        }
+    },
+    {
+        "DisplayName":"Game Mode",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"GameMode",
+        "InputType":"text",
+        "Hidden":true,
+        "ParamFieldName":"/Script/PrimalEarth.ServerGameInstance.GameMode",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Server Password",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the password required for players to join the server",
+        "Keywords":"server,password,serverpassword",
+        "FieldName":"ServerPassword",
+        "InputType":"password",
+        "ParamFieldName":"ServerPassword",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"",
+        "SkipIfEmpty":true,
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Admin Password",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the admin password. Default is a strong random password",
+        "Keywords":"admin,password,adminpassword",
+        "FieldName":"AdminPassword",
+        "InputType":"password",
+        "ParamFieldName":"AdminPassword",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"{{newguid()}}",
+        "SkipIfEmpty":true,
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Player Limit",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets the maximum number of players that can connect to the server at one time",
+        "Keywords":"maximum,player,limit,numplayers",
+        "FieldName":"$MaxUsers",
+        "InputType":"number",
+        "ParamFieldName":"NumPlayers",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"32",
+        "Placeholder":"32",
+        "Suffix":"players",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Discord Link",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"Sets a link for players to click in-game to join a Discord server. Only include the invite code, not the full URL",
+        "Keywords":"discord,link,discordlink",
+        "FieldName":"DiscordLink",
+        "InputType":"text",
+        "ParamFieldName":"/Script/PrimalEarth.ServerGameInstance.DiscordLink",
+        "DefaultValue":"",
+        "Placeholder":"attoric",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Custom Settings",
+        "Category":"Primal Earth:stadia_controller",
+        "Subcategory":"Server:dns:1",
+        "Description":"To configure other settings for the server, create a configuration file and paste the contents into WindowsServer/PrimalEarth/Saved/Config/WindowsServer/Game.ini",
+        "Keywords":"custom,settings",
+        "FieldName":"CustomSettings",
+        "InputType":"hidden",
+        "ParamFieldName":"CustomSettings",
+        "EnumValues":{}
+    }
+]
