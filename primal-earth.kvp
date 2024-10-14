@@ -29,10 +29,10 @@ App.DisplayName=Primal Earth
 App.RootDir=./primal-earth/
 App.BaseDirectory=./primal-earth/2917780/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=2917780\PrimalEarthServer.exe
+App.ExecutableWin=2917780\PrimalEarth\Binaries\Win64\PrimalEarthServer-Win64-Shipping.exe
 App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=2917780
-App.LinuxCommandLineArgs="./PrimalEarthServer.exe"
+App.LinuxCommandLineArgs="./PrimalEarth/Binaries/Win64/PrimalEarthServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -Port={{$GamePort}} -QueryPort={{$SteamQueryPort}} -MultiHome={{$ApplicationIPBinding}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput
 App.UseLinuxIOREDIR=False
@@ -75,7 +75,7 @@ App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^{{$FullBaseDir}}PrimalEarthServer\.exe -Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^{{$FullBaseDir}}PrimalEarth/Binaries/Win64/PrimalEarthServer-Win64-Shipping.exe -Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RegexMatch
