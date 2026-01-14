@@ -45,7 +45,7 @@
         "DisplayName": "GSP Download URL",
         "Category": "Hytale:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "The URL to download the GSP server build from. Should include {{$InstanceID}} placeholder.",
+        "Description": "The base URL to download the GSP server build from. Instance ID will be appended automatically.",
         "Keywords": "",
         "FieldName": "GSPDownloadURL",
         "InputType": "text",
