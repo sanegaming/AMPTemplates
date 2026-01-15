@@ -13,6 +13,26 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "GSP Token Server Query",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"max_attempts=3; attempt=1; while [ $attempt -le $max_attempts ]; do echo \\\"Querying GSP Token Server (attempt $attempt/$max_attempts)...\\\"; if curl -fsS --max-time 30 '{{GSPTokenURL}}{{$InstanceID}}'; then echo \\\"GSP Token Server query successful.\\\"; exit 0; fi; echo \\\"Attempt $attempt failed.\\\"; attempt=$((attempt + 1)); [ $attempt -le $max_attempts ] && sleep 5; done; echo \\\"GSP Token Server query failed after $max_attempts attempts. Aborting.\\\"; exit 1\"",
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "GSP Token Server Query",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $maxAttempts = 3; $attempt = 1; while ($attempt -le $maxAttempts) { Write-Output \\\"Querying GSP Token Server (attempt $attempt/$maxAttempts)...\\\"; try { $response = Invoke-WebRequest -UseBasicParsing -Uri '{{GSPTokenURL}}{{$InstanceID}}' -TimeoutSec 30 -ErrorAction Stop; Write-Output \\\"GSP Token Server query successful.\\\"; exit 0 } catch { Write-Output \\\"Attempt $attempt failed: $_\\\" }; $attempt++; if ($attempt -le $maxAttempts) { Start-Sleep -Seconds 5 } }; Write-Output \\\"GSP Token Server query failed after $maxAttempts attempts. Aborting.\\\"; exit 1\"",
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Hytale Downloader CLI Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
