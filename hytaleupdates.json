@@ -3,7 +3,7 @@
         "UpdateStageName": "GSP Server Build Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "{{GSPDownloadURL}}{{$InstanceID}}",
+        "UpdateSourceData": "{{GSPDownloadURL}}{{$InstanceID}}/server.zip",
         "UpdateSourceTarget": "{{$FullRootDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
